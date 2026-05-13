@@ -92,7 +92,14 @@ export function TransactionForm({
     setLoading(true)
     const supabase = createClient()
 
-    const payload = { description, amount: parsedAmount, date, type, category }
+    const { data: { user } } = await supabase.auth.getUser()
+    if (!user) {
+      toast.error('Sessão expirada. Faça login novamente.')
+      setLoading(false)
+      return
+    }
+
+    const payload = { description, amount: parsedAmount, date, type, category, user_id: user.id }
 
     if (isEditing) {
       const { error } = await supabase
