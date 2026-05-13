@@ -6,6 +6,7 @@ import { LayoutDashboard, ArrowLeftRight, TrendingUp, LogOut } from 'lucide-reac
 import { createClient } from '@/lib/supabase/client'
 import { useRouter } from 'next/navigation'
 import { cn } from '@/lib/utils'
+import { ThemeToggle } from '@/components/theme-toggle'
 
 const navItems = [
   { href: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
@@ -24,7 +25,7 @@ export function Sidebar() {
   }
 
   return (
-    <aside className="hidden md:flex flex-col w-60 border-r bg-white min-h-screen">
+    <aside className="hidden md:flex flex-col w-60 border-r bg-card min-h-screen">
       <div className="flex items-center gap-2 px-6 py-5 border-b">
         <TrendingUp className="h-6 w-6 text-primary" />
         <span className="font-bold text-base">FinançasPessoais</span>
@@ -46,7 +47,11 @@ export function Sidebar() {
           </Link>
         ))}
       </nav>
-      <div className="px-3 pb-4">
+      <div className="px-3 pb-4 space-y-1">
+        <div className="flex items-center justify-between rounded-lg px-3 py-2">
+          <span className="text-sm font-medium text-muted-foreground">Tema</span>
+          <ThemeToggle />
+        </div>
         <button
           onClick={handleLogout}
           className="flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
