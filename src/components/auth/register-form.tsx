@@ -60,6 +60,9 @@ export function RegisterForm() {
           <p className="text-sm text-muted-foreground">
             Verifique seu e-mail para confirmar o cadastro e poder fazer login.
           </p>
+          <p className="text-xs text-muted-foreground">
+            Não encontrou o e-mail? Verifique também a pasta de <strong>spam</strong> ou <strong>lixo eletrônico</strong>.
+          </p>
           <Link href="/login">
             <Button className="w-full">Ir para o Login</Button>
           </Link>

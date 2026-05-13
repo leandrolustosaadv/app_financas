@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
+import { ThemeToggle } from '@/components/theme-toggle'
 import {
   TrendingUp,
   BarChart2,
@@ -59,7 +60,8 @@ export default function LandingPage() {
             <TrendingUp className="h-6 w-6 text-primary" />
             <span className="font-bold text-lg">FinançasPessoais</span>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
             <Link href="/login">
               <Button variant="ghost" size="sm">
                 Entrar
