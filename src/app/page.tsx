@@ -54,7 +54,7 @@ export default function LandingPage() {
   return (
     <div className="flex min-h-screen flex-col">
       {/* Header */}
-      <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-10">
+      <header className="border-b bg-background/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
           <div className="flex items-center gap-2">
             <TrendingUp className="h-6 w-6 text-primary" />
@@ -105,7 +105,7 @@ export default function LandingPage() {
       </section>
 
       {/* Features */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-background">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold">Tudo que você precisa</h2>
@@ -130,10 +130,10 @@ export default function LandingPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-4 bg-primary text-primary-foreground">
+      <section className="py-20 px-4 bg-blue-600 dark:bg-blue-950 text-white">
         <div className="container mx-auto max-w-2xl text-center space-y-6">
           <h2 className="text-3xl font-bold">Pronto para começar?</h2>
-          <p className="text-primary-foreground/80">
+          <p className="text-white/80">
             Crie sua conta gratuitamente e comece a controlar suas finanças hoje mesmo.
           </p>
           <Link href="/register">

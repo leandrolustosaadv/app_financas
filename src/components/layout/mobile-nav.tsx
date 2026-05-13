@@ -14,7 +14,7 @@ export function MobileNav() {
   const pathname = usePathname()
 
   return (
-    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-10 flex border-t bg-white">
+    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-10 flex border-t bg-card">
       {navItems.map((item) => (
         <Link
           key={item.href}

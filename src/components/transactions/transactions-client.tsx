@@ -236,13 +236,15 @@ export function TransactionsClient() {
               <CardContent className="py-3 px-4 flex items-center gap-3">
                 <div
                   className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full ${
-                    t.type === 'receita' ? 'bg-green-100' : 'bg-red-100'
+                    t.type === 'receita'
+                      ? 'bg-green-100 dark:bg-green-900/40'
+                      : 'bg-red-100 dark:bg-red-900/40'
                   }`}
                 >
                   {t.type === 'receita' ? (
-                    <TrendingUp className="h-4 w-4 text-green-600" />
+                    <TrendingUp className="h-4 w-4 text-green-600 dark:text-green-400" />
                   ) : (
-                    <TrendingDown className="h-4 w-4 text-red-500" />
+                    <TrendingDown className="h-4 w-4 text-red-500 dark:text-red-400" />
                   )}
                 </div>
 
@@ -260,7 +262,9 @@ export function TransactionsClient() {
 
                 <p
                   className={`text-sm font-semibold shrink-0 ${
-                    t.type === 'receita' ? 'text-green-600' : 'text-red-500'
+                    t.type === 'receita'
+                      ? 'text-green-600 dark:text-green-400'
+                      : 'text-red-500 dark:text-red-400'
                   }`}
                 >
                   {t.type === 'receita' ? '+' : '-'} {formatCurrency(t.amount)}
